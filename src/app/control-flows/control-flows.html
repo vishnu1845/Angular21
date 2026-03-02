@@ -1,0 +1,57 @@
+<h2>control-flows works!</h2><hr>
+
+@if (isLogin()) {
+    <p>Welcome to the application!</p>
+    <button (click)="loginbtn(false)">Log Out</button>
+} @else {
+    <p>Pls Login!</p>
+    <button (click)="loginbtn(true)">Log In</button>
+}
+
+<h3>Toggle</h3>
+@if (toggle()) {
+    <button (click)="toggle.set(false)">Hide</button>
+} @else {
+    <button (click)="toggle.set(true)">Show</button>
+}
+
+<h3>Check ordered status!</h3>
+
+@if (status() == 'shipped') {
+    <p style="color: yellowgreen;"><strong>Order in shipped!</strong></p>
+}@else if (status() == 'pending') {
+    <p style="color: rgb(17, 17, 18);"><strong>Order is pending!</strong></p>
+}@else if (status() == 'success') {
+    <p style="color: aquamarine;"><strong>Order is delivered!</strong></p>
+}@else if (status() == 'canceled') {
+    <p style="color: red;"><strong>Order is canceled!</strong></p>
+}
+
+<select  (click)="handledStatus($event)" name="" id="">
+    <option value="shipped">Shipped</option>
+    <option value="pending">Pending</option>
+    <option value="success">Success</option>
+    <option value="canceled">Canseled</option>
+</select><br>
+
+<h3>Switch case</h3>
+@switch (country()) {
+    @case ('Ind') {
+        <p style="color: aqua;">{{country()}} is Asian!</p>
+    } @case ('UAE') {
+        <p style="color: aquamarine;">{{country()}} is Middlist!</p>
+    } @default {
+        <p style="color: blue;">{{country()}}country is not defined yet!</p>
+    }
+}
+
+<h2>Control statements</h2><hr>
+
+<ul>
+    @for (user of users(); track user) {
+        <li>{{user}}</li>
+    }
+</ul>
+
+
+

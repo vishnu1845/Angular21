@@ -1,0 +1,18 @@
+<h2>signal works!</h2>
+<p>Count is : {{count()}}</p>
+<button (click)="increase()">Increase</button>
+<button (click)="decrease()">Decrease</button>
+<button (click)="count.set(0)">Reset</button>
+
+<h3>Computed Signal!</h3>
+<div>
+    <input type="text" placeholder="First Name" [formControl]="firstNameControl">
+    <input type="text" placeholder="Last Name" [formControl]="lastNameControl">
+</div>
+
+<p><strong>First Name:</strong> {{ firstName() }}</p>
+<p><strong>Last Name:</strong> {{ lastName() }}</p>
+
+<h3>Full Name (Computed): {{ fullName() }}</h3>
+
+<button (click)="toggel()">Dark Mode</button>

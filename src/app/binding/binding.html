@@ -1,0 +1,43 @@
+<h2>binding works!</h2>
+
+<h3>1. String interpollation</h3>
+<p>{{title()}}</p>
+
+<h3>2.Event binding</h3>
+<input type="text" (input)="handleEvent($event)" placeholder="getting value...">
+
+<input type="text" (change)="inputChange($event.type)" placeholder="event type..">
+
+<select name="country" (input)="handleEvent($event)" id="">
+    <option value="IND">India</option>
+    <option value="TB">The Bahamas</option>
+    <option value="UAE">Dubai</option>
+</select>
+
+<button type="submit" (click)="btnClick($event)">Click</button>
+
+
+<h3>3.Property binding</h3>
+<img [src]="img" alt="img" height="150px">
+<p>{{isToggled()}}</p>
+<button [disabled]="isToggled()" (click)="toggle()">Toggle</button>
+
+<h3>4. Two way binding</h3>
+<p>UserName is a <strong>{{userName()}}</strong></p>
+<input type="text" [value]="userName()" (input)="userName.set($event.target.value)">
+
+<p>User age is a {{age}}</p>
+<!-- <input type="number" [(ngModel)]="age"> -->
+<input type="number" [ngModel]="age" (ngModelChange)="age = $event">
+
+
+<p>Signal object</p>
+
+<p>{{userData().name}}</p>
+<input type="text" [value]="userData().name" (input)="updatedUSerData('name',$event.target.value)">
+
+<p>{{userData().age}}</p>
+<input type="number" [value]="userData().age" (input)="updatedUSerData('age',$event.target.value)">
+
+<p>{{userData().email}}</p>
+<input type="text" [value]="userData().email" (input)="updatedUSerData('email',$event.target.value)">
