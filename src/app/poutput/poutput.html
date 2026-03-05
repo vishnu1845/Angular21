@@ -1,0 +1,13 @@
+<h2>parent component -output!</h2><hr>
+
+<!-- Old way --> 
+
+<app-coutput (notifyParent)="receiveMsgFromChild($event)"></app-coutput>
+<p>Message from child component in parent: <strong>{{msgFromChildComponent}}</strong></p>
+
+
+
+<!-- new way -->
+
+<app-coutput #child></app-coutput>
+<p>Message from child component:<strong> {{child.msg()}}</strong></p>

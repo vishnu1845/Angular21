@@ -1,0 +1,28 @@
+<h2>Directives works!</h2>
+<hr>
+
+<h3>1.Structural directives!</h3>
+<p *ngIf="isStatus(); else elseBlock">Boolean status ia a true!</p>
+
+<ng-template #elseBlock>
+    <p>Boolean status is a false!</p>
+</ng-template>
+
+<div [ngSwitch]="country">
+    <p *ngSwitchCase="'ind'">country is a Inidia!</p>
+    <p *ngSwitchCase="'TB'">country is a The Bahamas!</p>
+    <p *ngSwitchCase="'UAE'">country is a Dubai!</p>
+
+    <p *ngSwitchDefault="">country is not defined!</p>
+</div>
+
+<ul >
+    <li *ngFor="let n of num()">
+        {{n}}
+    </li>
+</ul>
+
+<h3>2.Attribute directives!</h3>
+<p [ngStyle]="{color:setcolor}">Lorem ipsum dolor sit amet.</p>
+
+<p [ngClass]="'class1'">Lorem ipsum dolor sit amet.</p>

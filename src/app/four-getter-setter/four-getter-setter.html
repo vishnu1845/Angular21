@@ -1,0 +1,21 @@
+<h2>Getter and setter!</h2><hr>
+<p>{{userName()}}</p>
+<!-- <input type="text" [(ngModel)]="userName()" placeholder="not supported">   -->
+<input type="text" [(ngModel)]="uName" placeholder="user name">  
+<input type="text" [ngModel]="userName()" (ngModelChange)="userName.set($event)">
+<input type="text" [value]="userName()" (input)="userName.set($event.target.value)">
+
+<p>Get value: <strong>{{uName}}</strong></p><br><br>
+
+<p>Name: {{ user().name }}</p>
+
+<input type="text" [(ngModel)]="userValue"><br><br>
+
+<p>Age: {{ user().age }}</p>
+<input type="text" [(ngModel)]="userAge"><br><br>
+
+<p>City: {{user().city}}</p>
+<input  [ngModel]="user().city"  (ngModelChange)="updateCity($event)">
+
+
+

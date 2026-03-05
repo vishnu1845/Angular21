@@ -1,0 +1,82 @@
+<h2>To-Do List!</h2><hr>
+
+
+<!-- <input placeholder="Write Something..."
+    [value]="newTodo()"
+    (input)="newTodo.set($event.target.value)" >
+
+<button (click)="addTodo()">Add</button>
+
+<hr>
+
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            <span>{{ $index +1 }}</span>
+
+            <span (click)="toggleTodo($index)"
+                [style.text-decoration]= "todo.done ? 'line-through' : 'none' ">
+                {{ todo.text }}
+            </span>
+
+            <button (click)="deleteTodo($index)">Delete</button>
+        </li>
+    }
+</ul>  -->
+
+
+
+
+<!-- <input type="text" [value]="newTodo()" (input)="newTodo.set($event.target.value)" placeholder="Add task...">
+<button (click)="addTask()">Add Task</button>
+
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            <span>{{$index +1}}</span>
+            <span (click)="toggleStatus($index)"[style.text-decoration]= "todo.done ? 'line-through' : 'none' "> {{todo.title}}</span>
+            <span><button (click)="deleteTodo($index)">Delete</button></span>
+        </li>
+    }
+
+    @empty {
+        <span>No Todo Task is there...</span>
+    }
+</ul> -->
+
+
+
+
+<!-- <input type="text" [value]="newTask()" (input)="newTask.set($event.target.value)" placeholder="Write Task here...">
+<button (click)="addTodos()">Add Task</button>
+
+<ul>
+    @for (task of tasks(); track $index) {
+        <li>
+            <span>{{$index +1}}</span>
+            <span (click)="toggleStatus($index)"[style.text-decoration]= "task.done ? 'line-through' : 'none' "> {{task.title}}</span>
+            <span><button (click)="deleteTask($index)">Delete</button></span>
+        </li>
+    }
+    @empty {
+        <span>nothing is there...</span>
+    }
+</ul> -->
+
+
+
+<input type="text" [value]="newTodo()" (input)="newTodo.set($event.target.value)" placeholder="Add task...">
+<button (click)="addTask()">Add Task</button>
+
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            <span>{{$index +1}}</span>
+            <span (click)="toggleStatus($index)"[style.text-decoration]= "todo.done ? 'line-through' : 'none' "> {{todo.title}}</span>
+            <span (click)="deleteTask($index)"><button>Delete</button></span>
+        </li>
+    }
+    @empty {
+        <span>Nothing is there...</span>
+    }
+</ul>
