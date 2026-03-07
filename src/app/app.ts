@@ -10,10 +10,11 @@ import { Parent } from './parent/parent';
 import { Poutput } from './poutput/poutput';
 import { DisplayCount } from './display-count/display-count';
 import { ControlCount } from './control-count/control-count';
+import { SixPipes } from './six-pipes/six-pipes';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Binding, Signal, ControlFlows, FourGetterSetter, TodoTask, FiveDirectives, Parent, Poutput, DisplayCount, ControlCount ],
+  imports: [RouterOutlet, Binding, Signal, ControlFlows, FourGetterSetter, TodoTask, FiveDirectives, Parent, Poutput, DisplayCount, ControlCount, SixPipes ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

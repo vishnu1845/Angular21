@@ -1,0 +1,21 @@
+<h2>Pipes component!</h2><hr>
+
+<input type="text" (input)="userName.set($event.target.value)" >
+<p>uppercase: {{userName() | uppercase}}</p>
+<p>lowercase: {{userName() | lowercase}}</p>
+<p>titlecase: {{userName() | titlecase}}</p>
+<br>
+<p>Amount in USD: {{ getAmountNumber() | currency }}</p>
+<p>Amount in INR: {{ getAmountNumber() | currency:'INR' }}</p>
+<p>Amount in Euro: {{ getAmountNumber() | currency:'EUR' }}</p>
+<br>
+<p>Date: {{date | date}}</p>
+<p>Date: {{date | date:'short'}}</p>
+<p>Date: {{date | date: 'medium'}}</p>
+<p>Date: {{date | date: 'long'}}</p>
+<p>Date: {{date | date: 'full'}}</p>
+<p>Date: {{date}}</p>
+<br>
+
+<p>Custom pipe: {{text | trim}}</p>
+<p>Custom pipe: {{text | trim:20}}</p>
